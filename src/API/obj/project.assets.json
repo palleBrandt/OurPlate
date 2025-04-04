@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lukaspallesen/ourPlate/API/OurPlate.Api.csproj",
+      "projectUniqueName": "/Users/lukaspallesen/ourPlate/src/API/OurPlate.Api.csproj",
       "projectName": "OurPlate.Api",
-      "projectPath": "/Users/lukaspallesen/ourPlate/API/OurPlate.Api.csproj",
+      "projectPath": "/Users/lukaspallesen/ourPlate/src/API/OurPlate.Api.csproj",
       "packagesPath": "/Users/lukaspallesen/.nuget/packages/",
-      "outputPath": "/Users/lukaspallesen/ourPlate/API/obj/",
+      "outputPath": "/Users/lukaspallesen/ourPlate/src/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/lukaspallesen/.nuget/NuGet/NuGet.Config"

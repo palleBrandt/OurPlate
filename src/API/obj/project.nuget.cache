@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1/Lp1iEpJfWNmi9YCJ/SnRHR3Q+cvirFEzTNVMjTNRFV32pD76GFEEFmxVNkey3+ru83ftTDTWrNB1I7PjmQCg==",
+  "dgSpecHash": "wMx4LDb5V9D3DjVOfFceBBh8bTserAuaitMtaRHwKH7fdBC4t08Kw48Vcdc1VBt5Yy8JHB4YtFUeA9w4uWqY0Q==",
   "success": true,
-  "projectFilePath": "/Users/lukaspallesen/ourPlate/API/OurPlate.Api.csproj",
+  "projectFilePath": "/Users/lukaspallesen/ourPlate/src/API/OurPlate.Api.csproj",
   "expectedPackageFiles": [
     "/Users/lukaspallesen/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/lukaspallesen/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
