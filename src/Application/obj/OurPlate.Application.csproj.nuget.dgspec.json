@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lukaspallesen/ourPlate/Application/OurPlate.Application.csproj": {}
+    "/Users/lukaspallesen/ourPlate/src/Application/OurPlate.Application.csproj": {}
   },
   "projects": {
-    "/Users/lukaspallesen/ourPlate/Application/OurPlate.Application.csproj": {
+    "/Users/lukaspallesen/ourPlate/src/Application/OurPlate.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lukaspallesen/ourPlate/Application/OurPlate.Application.csproj",
+        "projectUniqueName": "/Users/lukaspallesen/ourPlate/src/Application/OurPlate.Application.csproj",
         "projectName": "OurPlate.Application",
-        "projectPath": "/Users/lukaspallesen/ourPlate/Application/OurPlate.Application.csproj",
+        "projectPath": "/Users/lukaspallesen/ourPlate/src/Application/OurPlate.Application.csproj",
         "packagesPath": "/Users/lukaspallesen/.nuget/packages/",
-        "outputPath": "/Users/lukaspallesen/ourPlate/Application/obj/",
+        "outputPath": "/Users/lukaspallesen/ourPlate/src/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/lukaspallesen/.nuget/NuGet/NuGet.Config"

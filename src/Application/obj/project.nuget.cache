@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pBGdSM5sbKI5ouZYR+6Y0Lh7+VdOFQwIj4ecNCcR+aII61i/3RCnFmaVaZiO2TjKOqIkZZrKQvApfvIIL5rB7g==",
+  "dgSpecHash": "v5GV8Y/K2hug6SSZe2QmvRCzeva0rfT4TnjIZi52p/xotFoYOJ6D1J9tgwHmzKp+rk6m7y71OGsMkctsxjWGqQ==",
   "success": true,
-  "projectFilePath": "/Users/lukaspallesen/ourPlate/Application/OurPlate.Application.csproj",
+  "projectFilePath": "/Users/lukaspallesen/ourPlate/src/Application/OurPlate.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

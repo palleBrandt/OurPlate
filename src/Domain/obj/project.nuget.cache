@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l0BXNz1EUJmVaYUZsx2ewc1gD/1sxoNlaSi69q9VApp2ixztxwwZstjxJbNwHPAmIx3HoTGsyAfOp22I00yytA==",
+  "dgSpecHash": "IIlAk4TF8p8anIznQwvQrhKzW1M/16E2OYDEwCujruKehVmKixFmi4pK0t8TadOjzjo6q4/Pn0HhC1RWfkmUSg==",
   "success": true,
-  "projectFilePath": "/Users/lukaspallesen/ourPlate/Domain/OurPlate.Domain.csproj",
+  "projectFilePath": "/Users/lukaspallesen/ourPlate/src/Domain/OurPlate.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
