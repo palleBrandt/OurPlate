@@ -5,22 +5,22 @@ def create_player(name):
         'name': name,
         'hp': 100,
         'attack': (10, 20),
-        'potions': 3
+        'potions': 4
     }
 
 def attack(attacker, defender):
     damage = random.randint(*attacker['attack'])
     defender['hp'] -= damage
-    print(f"{attacker['name']} attacks {defender['name']} for {damage} damage!")
+    print(f"{attacker['name']} super attacks {defender['name']} for {damage} damage!")
 
 def use_potion(player):
     if player['potions'] > 0:
-        heal = random.randint(15, 30)
+        heal = random.randint(15, 300)
         player['hp'] += heal
         player['potions'] -= 1
         print(f"{player['name']} uses a potion and heals {heal} HP!")
     else:
-        print(f"{player['name']} has no potions left!")
+        print(f"{player['name']} unfortunately has no potions left!")
 
 def is_alive(player):
     return player['hp'] > 0
@@ -37,7 +37,7 @@ def player_turn(player, enemy):
 
 def enemy_turn(enemy, player):
     print(f"\n{enemy['name']}'s turn:")
-    if enemy['hp'] < 30 and enemy['potions'] > 0:
+    if enemy['hp'] < 50 and enemy['potions'] > 0:
         use_potion(enemy)
     else:
         attack(enemy, player)
@@ -58,7 +58,7 @@ def battle(player, enemy):
 def main():
     player_name = input("Enter your character's name: ")
     player = create_player(player_name)
-    enemy = create_player("Goblin King")
+    enemy = create_player("Goblin Kings Father")
     battle(player, enemy)
 
 if __name__ == "__main__":
