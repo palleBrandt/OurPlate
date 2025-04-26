@@ -1,0 +1,8 @@
+on:
+  push:
+
+jobs:
+  call-workflow-passing-data:
+    uses: BrandtBoys/Bachelor/.github/workflows/update_docs.yml@main
+    with:
+      testing: false
