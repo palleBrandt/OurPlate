@@ -1,6 +1,6 @@
 import random
 
-def create_new_player(name):
+def create_player(name):
     return {
         'name': name,
         'hp': 100,
@@ -8,46 +8,13 @@ def create_new_player(name):
         'potions': 4
     }
 
-def do_attack(attacker, defender):
-    """
-Attacks the defender with a random amount of damage.
-
-Args:
-    attacker (dict): A dictionary containing information about the attacking character.
-        - 'attack' (tuple): The range of possible attack values.
-        - 'name' (str): The name of the attacking character.
-    defender (dict): A dictionary containing information about the defending character.
-        - 'hp' (int): The current hit points of the defending character.
-
-Returns:
-    None
-
-Raises:
-    ValueError: If the attacker or defender dictionaries do not contain the required keys.
-"""
-damage = random.randint(*attacker['attack'])
+def attack(attacker, defender):
+    damage = random.randint(*attacker['attack'])
     defender['hp'] -= damage
     print(f"{attacker['name']} super attacks {defender['name']} for {damage} damage!")
 
-def use_potions(player):
-    """
-Use a Potion on the Player
-
-This function allows the player to use a potion, healing their health points.
-
-Parameters
-----------
-player (dict): A dictionary containing information about the player, including 'potions' and 'hp'.
-
-Returns
--------
-None
-
-Raises
-------
-None
-"""
-if player['potions'] > 0:
+def use_potion(player):
+    if player['potions'] > 0:
         heal = random.randint(15, 300)
         player['hp'] += heal
         player['potions'] -= 1
@@ -55,32 +22,11 @@ if player['potions'] > 0:
     else:
         print(f"{player['name']} unfortunately has no potions left!")
 
-def is__still_alive(player):
-    """
-Checks if a player is still alive based on their current health points.
+def is_alive(player):
+    return player['hp'] > 0
 
-Args:
-    player (dict): A dictionary containing the player's information, including 'hp' for health points.
-
-Returns:
-    bool: True if the player has more than 0 health points, False otherwise.
-"""
-return player['hp'] > 0
-
-def take_player_turn(player, enemy):
-    """
-Takes the player's turn in the game.
-
-This function prompts the player to choose an action (attack or potion) and then calls the corresponding functions to handle the chosen action.
-
-Parameters:
-- player (dict): The current player's information.
-- enemy (object): The enemy the player is facing.
-
-Returns:
-None
-"""
-print(f"\n{player['name']}'s turn:")
+def player_turn(player, enemy):
+    print(f"\n{player['name']}'s turn:")
     choice = input("Choose action (attack/potion): ").strip().lower()
     if choice == 'attack':
         attack(player, enemy)
@@ -89,14 +35,14 @@ print(f"\n{player['name']}'s turn:")
     else:
         print("Invalid choice. Turn skipped!")
 
-def take_enemy_turn(enemy, player):
+def enemy_turn(enemy, player):
     print(f"\n{enemy['name']}'s turn:")
     if enemy['hp'] < 50 and enemy['potions'] > 0:
         use_potion(enemy)
     else:
         attack(enemy, player)
 
-def fight(player, enemy):
+def battle(player, enemy):
     print("Battle Start!")
     while is_alive(player) and is_alive(enemy):
         player_turn(player, enemy)
@@ -110,7 +56,7 @@ def fight(player, enemy):
         print(f"\n{player['name']} HP: {player['hp']} | {enemy['name']} HP: {enemy['hp']}")
 
 def main():
-    player_name = input("Enter your character's fighter name: ")
+    player_name = input("Enter your character's name: ")
     player = create_player(player_name)
     enemy = create_player("Goblin Kings Father")
     battle(player, enemy)
