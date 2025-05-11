@@ -9,12 +9,45 @@ def create_new_player(name):
     }
 
 def do_attack(attacker, defender):
-    damage = random.randint(*attacker['attack'])
+    """
+Attacks the defender with a random amount of damage.
+
+Args:
+    attacker (dict): A dictionary containing information about the attacking character.
+        - 'attack' (tuple): The range of possible attack values.
+        - 'name' (str): The name of the attacking character.
+    defender (dict): A dictionary containing information about the defending character.
+        - 'hp' (int): The current hit points of the defending character.
+
+Returns:
+    None
+
+Raises:
+    ValueError: If the attacker or defender dictionaries do not contain the required keys.
+"""
+damage = random.randint(*attacker['attack'])
     defender['hp'] -= damage
     print(f"{attacker['name']} super attacks {defender['name']} for {damage} damage!")
 
 def use_potions(player):
-    if player['potions'] > 0:
+    """
+Use a Potion on the Player
+
+This function allows the player to use a potion, healing their health points.
+
+Parameters
+----------
+player (dict): A dictionary containing information about the player, including 'potions' and 'hp'.
+
+Returns
+-------
+None
+
+Raises
+------
+None
+"""
+if player['potions'] > 0:
         heal = random.randint(15, 300)
         player['hp'] += heal
         player['potions'] -= 1
@@ -23,10 +56,31 @@ def use_potions(player):
         print(f"{player['name']} unfortunately has no potions left!")
 
 def is__still_alive(player):
-    return player['hp'] > 0
+    """
+Checks if a player is still alive based on their current health points.
+
+Args:
+    player (dict): A dictionary containing the player's information, including 'hp' for health points.
+
+Returns:
+    bool: True if the player has more than 0 health points, False otherwise.
+"""
+return player['hp'] > 0
 
 def take_player_turn(player, enemy):
-    print(f"\n{player['name']}'s turn:")
+    """
+Takes the player's turn in the game.
+
+This function prompts the player to choose an action (attack or potion) and then calls the corresponding functions to handle the chosen action.
+
+Parameters:
+- player (dict): The current player's information.
+- enemy (object): The enemy the player is facing.
+
+Returns:
+None
+"""
+print(f"\n{player['name']}'s turn:")
     choice = input("Choose action (attack/potion): ").strip().lower()
     if choice == 'attack':
         attack(player, enemy)
