@@ -1,6 +1,6 @@
 import random
 
-def create_player(name):
+def create_new_player(name):
     return {
         'name': name,
         'hp': 100,
@@ -8,12 +8,12 @@ def create_player(name):
         'potions': 4
     }
 
-def attack(attacker, defender):
+def do_attack(attacker, defender):
     damage = random.randint(*attacker['attack'])
     defender['hp'] -= damage
     print(f"{attacker['name']} super attacks {defender['name']} for {damage} damage!")
 
-def use_potion(player):
+def use_potions(player):
     if player['potions'] > 0:
         heal = random.randint(15, 300)
         player['hp'] += heal
@@ -22,10 +22,10 @@ def use_potion(player):
     else:
         print(f"{player['name']} unfortunately has no potions left!")
 
-def is_alive(player):
+def is__still_alive(player):
     return player['hp'] > 0
 
-def player_turn(player, enemy):
+def take_player_turn(player, enemy):
     print(f"\n{player['name']}'s turn:")
     choice = input("Choose action (attack/potion): ").strip().lower()
     if choice == 'attack':
@@ -35,14 +35,14 @@ def player_turn(player, enemy):
     else:
         print("Invalid choice. Turn skipped!")
 
-def enemy_turn(enemy, player):
+def take_enemy_turn(enemy, player):
     print(f"\n{enemy['name']}'s turn:")
     if enemy['hp'] < 50 and enemy['potions'] > 0:
         use_potion(enemy)
     else:
         attack(enemy, player)
 
-def battle(player, enemy):
+def fight(player, enemy):
     print("Battle Start!")
     while is_alive(player) and is_alive(enemy):
         player_turn(player, enemy)
@@ -56,7 +56,7 @@ def battle(player, enemy):
         print(f"\n{player['name']} HP: {player['hp']} | {enemy['name']} HP: {enemy['hp']}")
 
 def main():
-    player_name = input("Enter your character's name: ")
+    player_name = input("Enter your character's fighter name: ")
     player = create_player(player_name)
     enemy = create_player("Goblin Kings Father")
     battle(player, enemy)
