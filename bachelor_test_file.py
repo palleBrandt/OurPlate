@@ -9,12 +9,49 @@ def create_player(name):
     }
 
 def attack(attacker, defender):
-    damage = random.randint(*attacker['attack'])
+    """
+Attacks the defender with a random amount of damage.
+
+Args:
+    attacker (dict): A dictionary containing information about the attacking character.
+        - 'attack' (tuple): The range of possible attack values.
+        - 'name' (str): The name of the attacking character.
+    defender (dict): A dictionary containing information about the defending character.
+        - 'hp' (int): The current hit points of the defending character.
+
+Returns:
+    None
+
+Raises:
+    ValueError: If the attacker or defender dictionaries do not contain the required keys.
+"""
+damage = random.randint(*attacker['attack'])
     defender['hp'] -= damage
     print(f"{attacker['name']} attacks {defender['name']} for {damage} damage!")
 
 def use_potion(player):
-    if player['potions'] > 0:
+    """
+Use a Potion on a Player
+
+This function allows the player to use a potion, healing their health points.
+
+Parameters
+----------
+player (dict): A dictionary containing information about the player.
+             It should have the following keys:
+             - 'potions' (int): The number of potions available.
+             - 'name' (str): The name of the player.
+             - 'hp' (int): The current health points of the player.
+
+Returns
+-------
+None
+
+Raises
+------
+None
+"""
+if player['potions'] > 0:
         heal = random.randint(14, 300)
         player['hp'] += heal
         player['potions'] -= 1
