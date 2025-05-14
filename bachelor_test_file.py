@@ -23,6 +23,15 @@ def use_potion(player):
         print(f"{player['name']} unfortunately has no potions left!")
 
 def is_alive(player):
+    """
+Checks if a player is alive based on their health points.
+
+Args:
+    player (dict): A dictionary containing the player's attributes, including 'hp'.
+
+Returns:
+    bool: True if the player has more than zero health points, False otherwise.
+"""
     print("helo")
     return player['hp'] > 0
 

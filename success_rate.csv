@@ -1,1 +1,2 @@
 3,8
+"(True, '""""""\nChecks if a player is alive based on their health points.\n\nArgs:\n    player (dict): A dictionary containing the player\'s attributes, including \'hp\'.\n\nReturns:\n    bool: True if the player has more than zero health points, False otherwise.\n""""""')"
