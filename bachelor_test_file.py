@@ -23,7 +23,7 @@ def use_potion(player):
         print(f"{player['name']} unfortunately has no potions left!")
 
 def is_alive(player):
-    print("helo")
+    print("heo")
     return player['hp'] > 0
 
 def player_turn(player, enemy):
