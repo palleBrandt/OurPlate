@@ -27,6 +27,21 @@ def is_alive(player):
     return player['hp'] > 0
 
 def player_turn(player, enemy):
+    """
+Determines the player's turn in the game.
+
+Parameters
+----------
+player (dict): A dictionary containing information about the current player.
+enemy (object): The enemy that the player is currently facing.
+
+Returns
+-------
+None
+
+This function prompts the player to choose an action, either 'attack' or 'potion'. 
+Depending on the chosen action, it calls either the `attack` function or the `use_potion` function. If an invalid choice is made, the turn is skipped.
+"""
     print(f"\n{player['name']}'s turn:")
     choice = input("Choose actions (attack/potion): ").strip().lower()
     if choice == 'attack':
