@@ -37,7 +37,7 @@ def player_turn(player, enemy):
         print("Invalid choice. Turn skipped!")
 
 def enemy_turn(enemy, player):
-    print("test")
+    print("te")
     print(f"\n{enemy['name']}' turn:")
     if enemy['hp'] < 50 and enemy['potions'] > 0:
         use_potion(enemy)
