@@ -30,6 +30,7 @@ def player_turn(player, enemy):
     print(f"\n{player['name']}'s turn:")
     choice = input("Choose actions (attack/potion): ").strip().lower()
     if choice == 'attack':
+        print("This is a test")
         attack(player, enemy)
     elif choice == 'potion':
         use_potion(player)
