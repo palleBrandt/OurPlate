@@ -1,1 +1,2 @@
 3,8
+"(False, '""""""\nDetermines the action for the enemy\'s turn in a game.\n\nParameters:\n    enemy (dict): A dictionary containing information about the enemy, including \'name\', \'hp\', and \'potions\'.\n    player (object): The player object, not used in this function.\n\nReturns:\n    None\n""""""\n\ndef enemy_turn(enemy, player):\n    print(""test"")\n    print(f""\\n{enemy[\'name\']}\' turn:"")\n    if enemy[\'hp\'] < 50 and enemy[\'potions\'] > 0:\n        use_potion(enemy)\n    else:\n        attack(enemy, player)')"
