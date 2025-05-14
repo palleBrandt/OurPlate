@@ -37,6 +37,20 @@ def player_turn(player, enemy):
         print("Invalid choice. Turn skipped!")
 
 def enemy_turn(enemy, player):
+    """
+Determines the action for the enemy's turn in a game.
+
+This function takes into account the enemy's current health points (HP) and potion availability.
+If the enemy has less than 50 HP and at least one potion is available, it uses a potion to heal itself.
+Otherwise, it attacks the player.
+
+Parameters:
+    enemy (dict): A dictionary containing information about the enemy, including 'name', 'hp', and 'potions'.
+    player (object): The player object, not used in this function but required for future expansions.
+
+Returns:
+    None
+"""
     print("te")
     print(f"\n{enemy['name']}' turn:")
     if enemy['hp'] < 50 and enemy['potions'] > 0:
