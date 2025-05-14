@@ -24,7 +24,16 @@ def use_potion(player):
 
 def is_alive(player):
 
-    return player['hp'] > 0
+   """
+Checks if a player is alive based on their hit points.
+
+Args:
+    player (dict): A dictionary containing the player's attributes, including 'hp'.
+
+Returns:
+    bool: True if the player has more than 0 hit points, False otherwise.
+"""
+     return player['hp'] > 0
 
 def player_turn(player, enemy):
     print(f"\n{player['name']}'s turn:")
